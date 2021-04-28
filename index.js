@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const patientRoutes = require('./Routes/Patient');
 const doctorRoutes = require('./Routes/Doctor');
 const billRoutes = require('./Routes/Bill');
+const roomRoutes = require('./Routes/Room');
 
 dotenv.config();
 
@@ -36,6 +37,7 @@ app.get('/',(req, res)=> {
 app.use('/api', patientRoutes);
 app.use('/api', doctorRoutes);
 app.use('/api', billRoutes);
+app.use('/api', roomRoutes);
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, ()=>{

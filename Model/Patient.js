@@ -28,6 +28,10 @@ const PatientSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Doctor',
         required: [true, 'Please enter a doctor']
+    },
+    isAdmitted: {
+        type: Boolean,
+        default: false
     }
 })
 
