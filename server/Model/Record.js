@@ -4,7 +4,8 @@ const recordSchema = new mongoose.Schema({
     patId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Patient',
-        required: [true, 'Please enter the patient id']
+        required: [true, 'Please enter the patient id'],
+        unique: true
     },
     description:{
         type: String,

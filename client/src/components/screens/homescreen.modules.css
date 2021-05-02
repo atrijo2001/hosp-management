@@ -1,0 +1,9 @@
+
+.bg{
+    background: url('../../images/hospital.jpg');
+    height: 50vh;
+    opacity: 0.6;
+}
+.bg-down{
+    background: rgb(15,0,36);
+    background: linear-gradient(90deg, rgba(15,0,36,0.7598389697675946) 0%, rgba(0,121,121,1) 85%, rgba(9,121,99,0.8270658605238971) 100%, rgba(18,85,214,0.9251050762101716) 100%);}
