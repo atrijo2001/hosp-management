@@ -9,6 +9,9 @@ const doctorRoutes = require('./Routes/Doctor');
 const billRoutes = require('./Routes/Bill');
 const roomRoutes = require('./Routes/Room');
 const recordRoutes = require('./Routes/Record');
+const employeeRoutes = require('./Routes/Employee');
+
+const {notFound, errorHandler} = require('./middleware/errorHandler')
 
 dotenv.config();
 
@@ -42,6 +45,11 @@ app.use('/api', doctorRoutes);
 app.use('/api', billRoutes);
 app.use('/api', roomRoutes);
 app.use('/api', recordRoutes);
+app.use('/api', employeeRoutes);
+
+//Custom middlewares
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, ()=>{

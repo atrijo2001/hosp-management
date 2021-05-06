@@ -1,24 +1,21 @@
 import React from 'react'
-import Helper from "./components/ui/Helper"
-import HomeScreen from "./components/screens/HomeScreen"
-import {BrowserRouter, Route, Switch} from "react-router-dom"
-import DoctorScreen from './components/screens/DoctorScreen'
-import DoctorState from "./context/DoctorContext/DoctorState"
-
-import AddDoctor from "./components/functional/AddDoctor"
+import Helper from './Helper'
+import {BrowserRouter, Switch, Route} from "react-router-dom"
+import HomeScreen from "./components/HomeScreen/HomeScreen"
+import Signup from "./components/Auth/Signup"
 
 const App = () => {
   return (
-    <DoctorState>
-      <Helper/>
-      <BrowserRouter>
-          <Switch>
+    <div>
+        {/* <Helper/>
+        <BrowserRouter>
+            <Switch>
               <Route exact path='/' component={HomeScreen}/>
-              <Route exact path='/doctors' component={DoctorScreen}/>
-              <Route exact path='/adddoctor' component={AddDoctor}/>
-          </Switch>
-      </BrowserRouter>
-    </DoctorState>
+            </Switch>
+        </BrowserRouter> */}
+        <Signup/>
+    </div>
+  
   )
 }
 

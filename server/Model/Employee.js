@@ -17,8 +17,8 @@ const employeeSchema = new mongoose.Schema({
         minLength: 6
     },
     role:{
-        type: Number,
-        enum: [1, 2, 3, 4],
+        type: String,
+        enum: ['doctor', 'receptionist', 'surgeon', 'nurse'],
         required: true
     },
     salary: {
@@ -30,6 +30,20 @@ const employeeSchema = new mongoose.Schema({
         minLength: 10,
         required: [true, 'Please enter a contact number']
     }
+})
+
+
+employeeSchema.methods.matchPassword = async function(enteredPassword){
+    return await bcrypt.compare(enteredPassword, this.password)
+ }
+
+employeeSchema.pre('save', async function(next){
+    if(!this.isModified('password')){
+        next()
+    }
+
+    const salt = await bcrypt.genSalt(10)
+    this.password = await bcrypt.hash(this.password, salt)
 })
 
 module.exports = new mongoose.model('Employee', employeeSchema);

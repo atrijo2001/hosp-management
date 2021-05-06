@@ -1,14 +1,18 @@
 const Doctor = require('../Model/Doctor');
 const Patient = require('../Model/Patient');
+const asyncHandler = require('express-async-handler');
 
-exports.createDoctor = async(req, res) => {
-    try {
+exports.createDoctor = asyncHandler(async(req, res) => {
+    
         const doctor = await Doctor.create(req.body);
-        res.status(200).json(doctor)
-    } catch (error) {
-        res.status(404).json(error)
-    }
-};
+        if(doctor){
+            res.status(200).json(doctor)
+        } else{
+            res.status(404);
+            throw new Error('error');
+        }
+    
+});
 
 exports.getAllDoctors = async(req, res) => {
     try {
