@@ -14,17 +14,13 @@ exports.createPatient = async(req, res) => {
 exports.getAllPatients = async(req, res) => {
     try {
         const patients = await Patient.find().populate('doc');
-        console.log(patients)
-        res.status(200).json({
-           patients
-        })
+        res.status(200).json(patients)
     } catch (error) {
         res.status(404).json(error)
     }
 }
 
 exports.getPatientById = async(req, res) => {
-    console.log(req.params.id)
     try {
         const patient = await Patient.findById(req.params.id).populate('doctor')
         res.status(200).json(patient)

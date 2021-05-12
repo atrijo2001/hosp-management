@@ -11,14 +11,11 @@ exports.protect = expressAsyncHandler(async(req, res, next) => {
             
 
             const decoded = jwt.verify(token, process.env.jwt_secret)
-            console.log(typeof(decoded))
 
             req.user = await Employee.findById(decoded.id).select('-password')
-            console.log(req.user)
             next()
             
         } catch (error) {
-            console.error(error)
             res.status(401)
             throw new Error('Not Authorized, token failed')
         }

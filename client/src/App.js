@@ -2,19 +2,18 @@ import React from 'react'
 import Helper from './Helper'
 import {BrowserRouter, Switch, Route} from "react-router-dom"
 import HomeScreen from "./components/HomeScreen/HomeScreen"
-import Signup from "./components/Auth/Signup"
+
+//Import all the js files
+import GetAllPatients from "./components/Patients/GetAllPatients"
+
+//Import all the context
+import PatientState from "./context/PatientContext/PatientState"
 
 const App = () => {
   return (
-    <div>
-        {/* <Helper/>
-        <BrowserRouter>
-            <Switch>
-              <Route exact path='/' component={HomeScreen}/>
-            </Switch>
-        </BrowserRouter> */}
-        <Signup/>
-    </div>
+    <PatientState>
+        <GetAllPatients/>
+    </PatientState>
   
   )
 }
