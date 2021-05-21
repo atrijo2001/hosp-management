@@ -30,8 +30,7 @@ const PatientSchema = new mongoose.Schema({
         required: [true, 'Please enter a doctor']
     },
     isAdmitted: {
-        type: Boolean,
-        default: false
+        type: Boolean
     }
 })
 
