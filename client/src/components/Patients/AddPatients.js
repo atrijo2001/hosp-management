@@ -21,7 +21,7 @@ const AddPatients = () => {
         "sex": 'Male',
         "address": '',
         "contactNumber": '',
-        "doc": '60770e6f08b7084ca4d21cc4'
+        "doc": '60a7666c2d312a1b9c57d433'
     }
     
     const onSubmit = values => {
@@ -73,10 +73,10 @@ const AddPatients = () => {
                     <div className="form-control my-2 py-2">
                         <label htmlFor="doc">Doctor</label>
                         <Field as="select" id="doc" name="doc">
-                            <option value="60770e6f08b7084ca4d21cc4">Dr Atrijo Gangopadhyay</option>
-                            <option value="60770e9a08b7084ca4d21cc5">Dr Anukriti Verma</option>
-                            <option value="6088355af1302148d88fd5c1">Dr Arkadeep Mukherjee</option>
-                            <option value="608ec7f6f3ad92286c05ebf5">Dr Pratyush Chatterjee</option>
+                            <option value="60a7666c2d312a1b9c57d433">Dr Atrijo Gangopadhyay</option>
+                            <option value="60a7667d2d312a1b9c57d434">Dr Anukriti Verma</option>
+                            <option value="60a766992d312a1b9c57d435">Dr Arkadeep Mukherjee</option>
+                            <option value="60a766ab2d312a1b9c57d436">Dr Pratyush Chatterjee</option>
                         </Field>
                     </div>
 
