@@ -29,3 +29,19 @@ exports.getPatientById = async(req, res) => {
         
     }
 }
+
+exports.deletePatient = async(req, res) => {
+    try {
+        const deletePatient = await Patient.findByIdAndDelete(req.params.id)
+        res.status(400).json({
+            message: "Successfully deleted Patient",
+            data: deletePatient
+          })
+        } catch (error) {
+          res.status(404).json({
+            message: "couldnt delete patient",
+            error
+          })
+        }
+
+}

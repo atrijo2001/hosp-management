@@ -18,11 +18,11 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors({origin: 'http://localhost:3000'}))
+app.use(cors())
 
 const connDB = async() => {
     try {
-        await mongoose.connect("mongodb://localhost:27017/hospital-management",{
+        await mongoose.connect("mongodb+srv://atrijo:atrijo@cluster0.suedr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
         useCreateIndex: true,
         useFindAndModify: true,
         useUnifiedTopology: true,

@@ -13,7 +13,10 @@ export default (state, action) => {
                 ...state,
                 error: action.payload
             }
-        default:
-            break;
+        case ADD_PATIENT_SUCCESS:
+            return{
+                ...state,
+                patients: [...state.patients, action.payload]
+            }
     }
 }
