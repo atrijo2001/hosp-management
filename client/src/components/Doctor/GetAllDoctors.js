@@ -6,14 +6,14 @@ import DoctorComp from "./DoctorComp"
 
 const GetAllDoctors = () => {
     const [doctors, setDoctors] = useState([])
-    const [error, setError] = useState(null)
+    const [loading, setLoading] = useState(true)
     const fetchDoctors = async () => {
         try {
             const {data} = await axios.get("http://localhost:5000/api/doctor");
+            setLoading(false);
             setDoctors(data)            
         } catch (err) {
             console.log(err)
-            setError(err)
         }
     }
 
@@ -21,17 +21,17 @@ const GetAllDoctors = () => {
         fetchDoctors()
     }, [])
 
-    if(doctors.length>0){
-        console.log(doctors)
-    }
     return (
-        <Container>
-            {doctors && !error? doctors.map((doctor, key)=>{
-                <Card key={key}>
-                    <DoctorComp doctor={doctor}/>
-                </Card>
-            }): <h1 className="text-center">Loading</h1>}
-        </Container>
+        <div style={{background: '#50DBB4'}}>
+            <h1 className="text-center font-weight-bold">Doctors details</h1>
+            {!loading && doctors.length>0 ? doctors.map((doctor, key)=>(
+                <div className="text-center mt-5 px-5"  style={{width: '60%', borderRadius: '12px'}}>
+                    <Card key={key}>
+                        <DoctorComp doctor={doctor}/>
+                    </Card>
+                </div>
+            )) : ''}
+        </div>
     )
 }
 

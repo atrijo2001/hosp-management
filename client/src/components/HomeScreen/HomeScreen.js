@@ -1,7 +1,18 @@
 import React from 'react'
 import background from '../../images/hospital.jpg'
 
+import {useHistory} from "react-router-dom"
+
 const HomeScreen = () => {
+
+	const history = useHistory()
+	const patientClicked = () => {
+		history.push('/patient')
+	}
+
+	const doctorClicked=()=>{
+		history.push('/doctor')
+	}
     return (
 			<div>
 				<img
@@ -74,6 +85,7 @@ const HomeScreen = () => {
 					<div className='row'>
 						<div className='col-6'>
 							<button
+							    onClick={patientClicked}
 								className='btn w-100'
 								style={{
 									backgroundColor: '#033b4a',
@@ -86,6 +98,7 @@ const HomeScreen = () => {
 						</div>
 						<div className='col-6'>
 							<button
+						        onClick={doctorClicked}
 								className='btn w-100'
 								style={{
 									backgroundColor: '#033b4a',
