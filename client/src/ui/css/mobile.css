@@ -1,0 +1,19 @@
+/* Navbar */
+.navbar{
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-heading{
+    margin: 0;
+}
+
+/* Specialities */
+.specialities{
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+.spec{
+    width: 100%;
+}

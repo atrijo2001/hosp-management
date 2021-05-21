@@ -16,7 +16,8 @@ import PatientState from "./context/PatientContext/PatientState"
 const App = () => {
   return (
     <PatientState>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Helper/>
             <Switch>
               <Route exact path='/' component={HomeScreen}/>
               <Route exact path='/patient' component={PatientScreen}/>
