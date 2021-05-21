@@ -1,0 +1,13 @@
+/* footer */
+footer {
+	background-color: #44bea5;
+	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	z-index: 5;
+}
+
+footer h5 {
+	font-weight: 100;
+	font-family: 'Bowlby One SC', cursive;
+}
