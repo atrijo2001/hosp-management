@@ -7,6 +7,8 @@ import HomeScreen from "./components/HomeScreen/HomeScreen"
 import GetAllPatients from "./components/Patients/GetAllPatients"
 import AddPatients from "./components/Patients/AddPatients"
 import PatientScreen from "./components/Patients/PatientScreen"
+import DoctorScreen from "./components/Doctor/DoctorScreen"
+import GetAllDoctors from "./components/Doctor/GetAllDoctors"
 
 //Import all the context
 import PatientState from "./context/PatientContext/PatientState"
@@ -20,6 +22,8 @@ const App = () => {
               <Route exact path='/patient' component={PatientScreen}/>
               <Route exact path='/patient/addpatient' component={AddPatients}/>
               <Route exact path='/patient/getallpatient' component={GetAllPatients}/>
+              <Route exact path='/doctor' component={DoctorScreen}/>
+              <Route exact path='/patient/getalldoctor' component={GetAllDoctors}/>
             </Switch>
         </BrowserRouter>
     </PatientState>

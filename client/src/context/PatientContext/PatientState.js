@@ -17,7 +17,7 @@ const PatientState = (props) => {
         try {
             const {data} = await axios.get("http://localhost:5000/api/patient", {
                 headers: {
-                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTBmYTNlNmQ3MGQyNWM5MGYzZWM2ZCIsImlhdCI6MTYyMDgzODIzNCwiZXhwIjoxNjIzNDMwMjM0fQ.HnAK-6VJpTTcS3HvML6eI184vKO-Phm3th66afgywP8'
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTc2NThhNjA1YzgwNDMwMDQyODM3MiIsImlhdCI6MTYyMTU4MzQyNCwiZXhwIjoxNjI0MTc1NDI0fQ.kFmr6m2FwjtZ3tWNZzDLDsbpqFpaDwfu8exnVXBABxk'
                 }
             })
             dispatch({
@@ -38,7 +38,7 @@ const PatientState = (props) => {
             const {data} = await axios.post("http://localhost:5000/api/patient", formData, {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwOTBmYTNlNmQ3MGQyNWM5MGYzZWM2ZCIsImlhdCI6MTYyMDgzODIzNCwiZXhwIjoxNjIzNDMwMjM0fQ.HnAK-6VJpTTcS3HvML6eI184vKO-Phm3th66afgywP8'
+                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTc2NThhNjA1YzgwNDMwMDQyODM3MiIsImlhdCI6MTYyMTU4MzQyNCwiZXhwIjoxNjI0MTc1NDI0fQ.kFmr6m2FwjtZ3tWNZzDLDsbpqFpaDwfu8exnVXBABxk'
                 }
             })
 
