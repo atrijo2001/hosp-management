@@ -16,6 +16,7 @@ const Pagination = ({ patientsPerPage, totalPatients ,paginate}) => {
 								paginate(number);
 							}}
 							className='page-link'
+							style={{ color: 'rgb(80, 219, 180)' }}
 						>
 							{number}
 						</a>
