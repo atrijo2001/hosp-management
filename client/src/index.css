@@ -1,7 +1,11 @@
-/* *{
+*{
   overflow-x: hidden;
+} 
+h1,h2,h3,h4,h5{
+  overflow-y: hidden;
+  font-family: 'Bowlby One SC' 
 }
-body{
-  background: 100% 100%;
+p{
+  font-family:'Abril Fatface' ;
+  font-size: 18px;
 }
- */
